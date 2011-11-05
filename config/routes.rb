@@ -1,4 +1,12 @@
 Cakeus::Application.routes.draw do
+  get "studdy/invite"
+
+  get "studdy/program"
+
+  get "studdy/about"
+
+  get "user/invite"
+
   #get \"users\/show\"
 
   root :to => "home#index"

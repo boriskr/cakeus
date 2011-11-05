@@ -1,10 +1,38 @@
 class User
   include Mongoid::Document
-  field :provider, :type => String
+ # field :provider, :type => String
   field :uid, :type => String
   field :name, :type => String
   field :email, :type => String
+  field :roles, :type => Array,  default: ["newbie"]
   attr_accessible :provider, :uid, :name, :email
+
+  def able?(role)
+    User.able?(self,role)
+  end
+
+  def enable(role)
+    User.enable(self,role)
+  end
+
+  def self.able?(user,role)
+    #puts (@roles)
+    if user.roles.include?(role)
+      true
+    else
+      false
+    end
+  end
+
+  def self.enable(user,role)
+    User.where(email: user.email).each do
+      |user|
+      if (!user.roles.include?(role))
+        user.roles << role
+        user.save
+      end
+    end
+  end
 
   def self.create_with_omniauth(auth)
     create! do |user|
@@ -22,4 +50,3 @@ class User
   end
 
 end
-
