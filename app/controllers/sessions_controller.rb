@@ -15,7 +15,9 @@ class SessionsController < ApplicationController
     else
       redirect_to root_url, :notice => 'Signed in!'
     end
-
+  rescue Exception => e
+    # Just spit out the error message and a backtrace.
+    render :text => "<html><body><pre>" + e.to_s + "</pre><hr /><pre>" + e.backtrace.join("\n") + "</pre></body></html>"
   end
 
   def destroy
