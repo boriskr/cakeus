@@ -16,9 +16,9 @@ describe StuddyController do
     end
   end
 
-  describe "GET 'invite'" do
+  describe "GET 'stash'" do
     it "returns http success" do
-      get 'invite'
+      get 'stash'
       response.should be_success
     end
   end

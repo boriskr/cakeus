@@ -1,11 +1,13 @@
 Cakeus::Application.routes.draw do
-  get "studdy/invite"
+  post "studdy/getinvite/:id"
+
+  get "studdy/stash"
 
   get "studdy/program"
 
   get "studdy/about"
 
-  get "user/invite"
+ # get "user/stash"
 
   #get \"users\/show\"
 

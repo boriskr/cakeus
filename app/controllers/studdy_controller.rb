@@ -5,7 +5,11 @@ class StuddyController < ApplicationController
   def about
   end
 
-  def invite
+  def stash
+  end
+
+  def getinvite
+
   end
 
 end
