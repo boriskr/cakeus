@@ -1,5 +1,6 @@
 Cakeus::Application.routes.draw do
-  post "studdy/getinvite/:id"
+
+  #post "studdy/getinvite/:id"
 
   get "studdy/stash"
 

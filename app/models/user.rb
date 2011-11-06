@@ -7,6 +7,8 @@ class User
   field :roles, :type => Array,  default: ["newbie"]
   attr_accessible :provider, :uid, :name, :email
 
+  embeds_many :connects
+
   def able?(role)
     User.able?(self,role)
   end
@@ -49,4 +51,12 @@ class User
     end
   end
 
+end
+
+class Connect
+  include Mongoid::Document
+
+  field :provider, :type => String
+  field :uid, :type => String
+  embedded_in :user
 end
