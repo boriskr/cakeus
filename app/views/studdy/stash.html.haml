@@ -1,2 +1,15 @@
-%h1 Studdy#stash
-%p Find me in app/views/studdy/stashhtml.haml
+.row
+  .span16
+    %p At one extremity the rope was unstranded, and the separate spread yarns were all braided and woven round the socket of the harpoon; the pole was then driven hard up into the socket; from the lower end the rope was traced half-way along the pole's length, and firmly secured so, with intertwistings of twine. This done, pole, iron, and rope&mdash;like the Three Fates&mdash;remained inseparable, and Ahab moodily stalked away with the weapon; the sound of his ivory leg, and the sound of the hickory pole, both hollowly ringing along every plank. But ere he entered his cabin, light, unnatural, half-bantering, yet most piteous sound was heard. Oh, Pip! thy wretched laugh, thy idle but unresting eye; all thy strange mummeries not unmeaningly blended with the black tragedy of the melancholy ship, and mocked it!
+    .row
+      .span8
+        .stash
+          %h3 in progress
+          - (0...4).each do |i|
+            = render 'shared/student'
+      .span8
+        .stash
+          %h3 caked
+          - (0...2).each do |i|
+            = render 'shared/student'
+          
