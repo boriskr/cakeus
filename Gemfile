@@ -6,8 +6,6 @@ group :assets do
   gem 'sass-rails',   '~> 3.1.4'
   gem 'coffee-rails', '~> 3.1.1'
   gem 'uglifier', '>= 1.0.3'
-  gem "compass", "~> 0.12.alpha.0"
-  gem "twitter-bootstrap-rails"
 end
 gem 'jquery-rails'
 if HOST_OS =~ /linux/i
@@ -46,5 +44,6 @@ gem "mongoid", ">= 2.2.3"
 gem "omniauth", ">= 1.0.0"
 gem "omniauth-contrib", :git => "https://github.com/intridea/omniauth-contrib"
 gem "omniauth-facebook", :git => "https://github.com/mkdynamic/omniauth-facebook"
+gem "twitter-bootstrap-rails"
 gem "rails-footnotes", ">= 3.7", :group => :development
 gem "cancan"
